@@ -45,3 +45,17 @@ def first_pos(string)
   array.each { |word| hash[word] = array.index(word) }
   return hash
 end
+
+#Chris Ward
+
+def first_pos(input_string)
+  output = {}
+  array = input_string.split(" ")
+  array.each_with_index do |word,index|
+    if output.has_key?(word)
+    else
+    output[word] = index
+    end
+  end
+output
+end
