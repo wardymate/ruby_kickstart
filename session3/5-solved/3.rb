@@ -50,3 +50,20 @@ def word_count(string)
   array.each { |word| hash[word] = array.count(word) }
   return hash
 end
+
+#Chris Ward
+
+def word_count(input_string)
+  output = {}
+  words_array = input_string.downcase.split(" ")
+  words_array.each do |word|
+    num = words_array.count(word)
+    if output.has_key?(word)
+    else
+      output[word] = num
+    end
+
+  end
+output
+
+end
