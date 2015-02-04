@@ -189,14 +189,27 @@ class Fraction
   end
 end
 
+<<<<<<< HEAD
 #Chris Ward
 
 class Fraction
+=======
+#Phil
+class Fraction
+  attr_accessor :numerator, :demoninator
+
+  def initialize(numerator, demoninator)
+    self.numerator = numerator
+    self.demoninator = demoninator
+  end
+
+>>>>>>> d533bf8d1d60ecf5f144874ee7cddbbdb3b7f862
   def gcd(a,b)
     return a if b == 0
     gcd(b, a%b)
   end
 
+<<<<<<< HEAD
   attr_accessor 'numerator', 'denominator'
 
   def initialize(numerator,denominator)
@@ -219,3 +232,20 @@ class Fraction
   end
 
 end
+=======
+  def to_f
+    numerator.to_f / denominator
+  end
+
+  def lowest
+    numerator = numerator / gcd(numerator, denominator)
+    denominator = denominator / gcd(numerator, denominator)
+    Fraction.new(numerator, denominator)
+  end
+
+  def to_s
+    "#{numerator}/#{denominator}"
+  end
+
+end
+>>>>>>> d533bf8d1d60ecf5f144874ee7cddbbdb3b7f862
